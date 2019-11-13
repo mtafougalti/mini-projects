@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.mt.mp</groupId>
+	<artifactId>eshop</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>E-Shop</name>
+	<description>E-Shop web site</description>
+
+	<properties>
+		<junit.version>3.8.1</junit.version>
+		<lombok.version>1.18.10</lombok.version>
+		<hibernate-core.version>5.4.8.Final</hibernate-core.version>
+		<hibernate-validator.version>6.1.0.Final</hibernate-validator.version>
+		<mysql-connector-java.version>8.0.18</mysql-connector-java.version>
+	</properties>
+
+	<modules>
+		<module>eshop-model</module>
+		<module>eshop-dao</module>
+		<module>eshop-service</module>
+	</modules>
+</project>
