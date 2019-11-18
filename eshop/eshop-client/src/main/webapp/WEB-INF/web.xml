@@ -15,7 +15,11 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-
+	<servlet>
+		<servlet-name>dependency-injector</servlet-name>
+		<servlet-class>com.mt.mp.eshop.client.DependencyInjector</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>jersey-serlvet</servlet-name>
 		<url-pattern>/rest/*</url-pattern>
