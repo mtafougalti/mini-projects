@@ -4,10 +4,14 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 
+import com.mt.mp.eshop.dao.category.CategoryDaoImpl;
 import com.mt.mp.eshop.dao.product.ProductDaoImpl;
 import com.mt.mp.eshop.dao.role.RoleDaoImpl;
+import com.mt.mp.eshop.service.category.CategoryService;
+import com.mt.mp.eshop.service.category.CategoryServiceImpl;
 import com.mt.mp.eshop.service.product.ProductService;
 import com.mt.mp.eshop.service.product.ProductServiceImpl;
 import com.mt.mp.eshop.service.role.RoleService;
@@ -23,6 +27,8 @@ public class DependencyInjector extends HttpServlet {
 	private RoleService roleService;
 	
 	private ProductService productService;
+
+	private CategoryService categoryService;
 	
 	private static DependencyInjector INSTANCE;
 	
@@ -38,11 +44,10 @@ public class DependencyInjector extends HttpServlet {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("ESHOP_UNIT");
 		EntityManager em = emf.createEntityManager();
 
-		// Inject ROLE dependencies
+		// Inject dependencies
 		roleService = new RoleServiceImpl(new RoleDaoImpl(em));
-		
-		// Inject PRODUCT dependencies
 		productService = new ProductServiceImpl(new ProductDaoImpl(em));
+		categoryService = new CategoryServiceImpl(new CategoryDaoImpl(em));
 	}
 
 	public static DependencyInjector getInstance() {

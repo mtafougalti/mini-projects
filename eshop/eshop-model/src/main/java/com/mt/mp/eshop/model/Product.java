@@ -3,6 +3,7 @@ package com.mt.mp.eshop.model;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -31,7 +32,7 @@ public class Product implements Serializable {
 	private double price;
 	private int quantity;
 	private String photo;
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="id_category")
 	private Category category;
 
