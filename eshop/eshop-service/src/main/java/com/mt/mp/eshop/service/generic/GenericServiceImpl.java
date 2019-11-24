@@ -6,7 +6,7 @@ import com.mt.mp.eshop.dao.generic.GenericDao;
 
 public class GenericServiceImpl<T> implements GenericService<T> {
 	
-	private GenericDao<T> genericDao;
+	protected GenericDao<T> genericDao;
 
 	public GenericServiceImpl(GenericDao<T> genericDao) {
 		this.genericDao = genericDao;

@@ -10,15 +10,15 @@ public class Basket implements Serializable {
 	
 	private static final long serialVersionUID = -9131291898325133205L;
 	
-	private Map<Long, OrederRow> items = new HashMap<Long, OrederRow>();
+	private Map<Long, OrderRow> items = new HashMap<Long, OrderRow>();
 
 	public void addItem(Product product, int quantity) {
 		if (items.get(product.getId()) != null) {
-			OrederRow row = new OrederRow(product.getPrice(), quantity);
+			OrderRow row = new OrderRow(product.getPrice(), quantity);
 			row.setProduct(product);
 			items.put(product.getId(), row);
 		} else {
-			OrederRow row = items.get(product.getId());
+			OrderRow row = items.get(product.getId());
 			row.setQuantity(row.getQuantity() + quantity);
 		}
 	}
@@ -27,13 +27,13 @@ public class Basket implements Serializable {
 		items.remove(idProduct);
 	}
 	
-	public Collection<OrederRow> getAllItems() {
+	public Collection<OrderRow> getAllItems() {
 		return items.values();
 	}
 	
 	public double getTotal() {
 		double total = 0;
-		for (OrederRow row : items.values()) {
+		for (OrderRow row : items.values()) {
 			total += row.getPrice()*row.getQuantity();
 		}
 		return total;

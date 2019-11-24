@@ -12,12 +12,15 @@ import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Product implements Serializable {
 	
 	private static final long serialVersionUID = -1169246748333953726L;
@@ -27,7 +30,7 @@ public class Product implements Serializable {
 	private Long id;
 	private String name;
 	@NotBlank
-	@Size(min=5, max=50)
+	@Size(min=5, max=500)
 	private String description;
 	private double price;
 	private int quantity;

@@ -1,4 +1,4 @@
-package com.mt.mp.eshop.service.client;
+package com.mt.mp.eshop.service.test;
 
 import java.util.Collection;
 
