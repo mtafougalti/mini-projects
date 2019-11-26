@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.mt.mp</groupId>
+	<artifactId>user-management</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>user-management</name>
+	<description>The project parent of user-management</description>
+
+	<properties>
+		<junit.version>3.8.1</junit.version>
+		<lombok.version>1.18.10</lombok.version>
+		<hibernate-core.version>5.4.8.Final</hibernate-core.version>
+		<hibernate-validator.version>6.1.0.Final</hibernate-validator.version>
+		<mysql-connector-java.version>8.0.18</mysql-connector-java.version>
+		<spring-core.version>4.3.25.RELEASE</spring-core.version>
+	</properties>
+
+	<modules>
+		<module>user-management-model</module>
+		<module>user-management-dao</module>
+		<module>user-management-service</module>
+    <module>user-management-web</module>
+  </modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring-core.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${spring-core.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring-core.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring-core.version}</version>
+		</dependency>
+		
+	</dependencies>
+
+
+</project>
