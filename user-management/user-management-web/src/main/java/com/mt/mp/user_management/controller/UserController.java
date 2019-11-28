@@ -3,8 +3,13 @@ package com.mt.mp.user_management.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mt.mp.user_management.model.User;
@@ -21,7 +26,8 @@ public class UserController {
 		return userService.getUser(id);
 	}
 
-	public User saveUser(User user) {
+	@PostMapping("/addUser")
+	public User saveUser(@RequestBody User user) {
 		return userService.saveUser(user);
 	}
 
@@ -30,18 +36,19 @@ public class UserController {
 		return userService.getUsers();
 	}
 
-	public List<User> getUsersByUserName(String name) {
+	@GetMapping("/usersByName")
+	public List<User> getUsersByUserName(@RequestParam String name) {
 		return userService.getUsersByUserName(name);
 	}
 
-	public User updateUser(User user) {
+	@PutMapping("/updateUser")
+	public User updateUser(@RequestBody User user) {
 		return userService.updateUser(user);
 	}
 
-	public void deleteUser(Long id) {
+	@DeleteMapping("/deleteUser/{id}")
+	public void deleteUser(@PathVariable Long id) {
 		userService.deleteUser(id);
 	}
 	
-	
-
 }

@@ -23,7 +23,8 @@
 		<module>user-management-dao</module>
 		<module>user-management-service</module>
     <module>user-management-web</module>
-  </modules>
+    <module>user-management-client-rest</module>
+	</modules>
 
 	<dependencies>
 		<dependency>
