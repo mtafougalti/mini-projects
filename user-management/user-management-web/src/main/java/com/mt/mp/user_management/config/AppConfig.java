@@ -1,5 +1,6 @@
 package com.mt.mp.user_management.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -13,6 +14,7 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc
 public class AppConfig {
 	
+	@Bean
 	public InternalResourceViewResolver viewResolver() {
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
 		viewResolver.setViewClass(JstlView.class);

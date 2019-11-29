@@ -24,7 +24,8 @@
 		<module>user-management-service</module>
     <module>user-management-web</module>
     <module>user-management-client-rest</module>
-	</modules>
+    <module>user-management-client-rmi</module>
+  </modules>
 
 	<dependencies>
 		<dependency>

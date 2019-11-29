@@ -1,5 +1,6 @@
 package com.mt.mp.user_management.service.test;
 
+import java.rmi.RemoteException;
 import java.util.Date;
 
 import org.springframework.context.ApplicationContext;
@@ -12,7 +13,7 @@ import com.mt.mp.user_management.service.UserService;
 
 public class Application {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws RemoteException {
 		//ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		ApplicationContext context = new AnnotationConfigApplicationContext(ServiceConfig.class);
 		UserService userService = context.getBean("userService", UserService.class);
