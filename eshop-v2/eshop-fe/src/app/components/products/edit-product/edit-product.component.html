@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-header">
+        Add new product
+    </div>
+    <div class="card-body">
+        <form [formGroup]="productForm" (ngSubmit)="addNewProduct()">
+
+            <div class="form-group">
+                <label for="name">Name : </label>
+                <input type="text" id="name" class="form-control" formControlName="name">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description : </label>
+                <input type="text" id="description" class="form-control" formControlName="description">
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price : </label>
+                <input type="text" id="price" class="form-control" formControlName="price">
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select name="category" id="category" class="form-control" formControlName="cat_id">
+                <option *ngFor="let item of categoryItems" value="{{item.id}}">{{item.name}}</option>
+              </select>
+            </div>
+
+            <button class="btn btn-info" type="submit">Save</button>
+        </form>
+    </div>
+</div>

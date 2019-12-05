@@ -1,0 +1,25 @@
+<h4>Products List</h4>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Category</th>
+            <th scope="col">Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of productList, let i=index">
+            <th scope="row">{{i}}</th>
+            <td>{{p.name}}</td>
+            <td>{{p.description}}</td>
+            <td>{{p.category?.name}}</td>
+            <td>{{p.price}}€</td>
+        </tr>
+    </tbody>
+</table>
+<div>
+    <a class="btn btn-success" routerLink="/addNewProduct">Add new product</a>
+</div>

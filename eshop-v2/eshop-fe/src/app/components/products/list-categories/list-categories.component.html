@@ -1,0 +1,21 @@
+<h4>Categories List</h4>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of categoriesList, let i=index">
+            <th scope="row">{{i}}</th>
+            <td>{{c.name}}</td>
+            <td>{{c.description}}</td>
+        </tr>
+    </tbody>
+</table>
+<div>
+    <a class="btn btn-success" routerLink="/addNewCategory">Add new category</a>
+</div>

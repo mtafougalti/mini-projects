@@ -1,0 +1,10 @@
+<div class="card categoriesPanel">
+    <div class="card-header">Categories</div>
+    <div class="card-body">
+        <ul class="nav nav-pills flex-column">
+            <li class="nav-item" *ngFor="let c of categories, let i=index">
+                <a class="nav-link" href="#">{{i+1}} - {{c.name}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
