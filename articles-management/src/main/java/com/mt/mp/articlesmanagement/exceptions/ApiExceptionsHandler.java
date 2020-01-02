@@ -23,6 +23,7 @@ public class ApiExceptionsHandler extends ResponseEntityExceptionHandler {
     public ResponseEntity<ErrorDetails> handleApiExceptions(Exception exception, WebRequest request) {
         ErrorDetails errorDetails = new ErrorDetails(HttpStatus.INTERNAL_SERVER_ERROR.toString(), request.getDescription(false));
         errorDetails.addErrorMessage(exception.getMessage());
+        exception.printStackTrace();
         return new ResponseEntity<>(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
