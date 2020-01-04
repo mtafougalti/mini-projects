@@ -1,4 +1,10 @@
-# Getting Started
+* Technical env :
+    - Spring Boot
+    - Spring Security
+    - JWT
+    ...
+
+# Getting Starte
 
 ### Reference Documentation
 For further reference, please consider the following sections:
