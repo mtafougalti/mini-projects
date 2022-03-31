@@ -15,7 +15,7 @@
 		<hibernate-core.version>5.4.8.Final</hibernate-core.version>
 		<hibernate-validator.version>6.1.0.Final</hibernate-validator.version>
 		<mysql-connector-java.version>8.0.18</mysql-connector-java.version>
-		<spring-core.version>4.3.25.RELEASE</spring-core.version>
+		<spring-core.version>5.3.18</spring-core.version>
 	</properties>
 
 	<modules>
